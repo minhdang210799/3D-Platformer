@@ -9,4 +9,8 @@ public class wefwefqw : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         other.GetComponent<Jump>().jumpStrength += jumpStrength;
     }
+
+    private void OnTriggerExit(Collider other) {
+        other.GetComponent<Jump>().jumpStrength -= jumpStrength;
+    }
 }
